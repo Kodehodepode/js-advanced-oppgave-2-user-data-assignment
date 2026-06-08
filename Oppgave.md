@@ -73,8 +73,8 @@ console.log(`${bookTitle} av ${author}, sjanger: ${genre}, sider: ${pages}`);```
 
 ## Leveringskrav:
 
-* Kode i en GitHub-repo med en README som forklarer funksjonaliteten.
-* GitHub Pages deployment slik at løsningen kan testes live.
-* Kommentarer
+* **Kode i en GitHub-repo** med en README som forklarer funksjonaliteten.
+* **GitHub Pages deployment** slik at løsningen kan testes live.
+* **Kommentarer**
 
 Lykke til! 🚀
