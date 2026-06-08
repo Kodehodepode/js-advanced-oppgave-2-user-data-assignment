@@ -68,9 +68,11 @@ console.log(`${bookTitle} av ${author}, sjanger: ${genre}, sider: ${pages}`);```
     "genre": "Science Fiction",
     "pages": 412
   }
-]```
+]
+```
 
 ## Leveringskrav:
+
 * Kode i en GitHub-repo med en README som forklarer funksjonaliteten.
 * GitHub Pages deployment slik at løsningen kan testes live.
 * Kommentarer
