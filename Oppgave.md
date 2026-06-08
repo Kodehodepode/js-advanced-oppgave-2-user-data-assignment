@@ -45,11 +45,11 @@ console.log(`${bookTitle} av ${author}, sjanger: ${genre}, sider: ${pages}`);```
 
 ## Tekniske krav:
 
-* Bruk localStorage til å lagre.
-* Bruk map(), filter(), sort(), reduce() til å manipulere dataene.
-* Bruk destructuring for enklere datahåndtering.
-* Bruk event listeners for å håndtere input.
-* Lag en enkel, men intuitiv UI der data kan legges til, vises, filtreres og slettes.
+* **Bruk localStorage** til å lagre.
+* **Bruk map(), filter(), sort(), reduce()** til å manipulere dataene.
+* **Bruk destructuring** for enklere datahåndtering.
+* **Bruk event listeners** for å håndtere input.
+* **Lag en enkel, men intuitiv UI** der data kan legges til, vises, filtreres og slettes.
 
 ## Forslag til oppbygning av dataobjekter i localStorage:
 ```javascript
