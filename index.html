@@ -10,22 +10,32 @@
     <body>
         <table id="fridge-table">
             <thead>
-                <th>
-                    <td>Product</td>
-                    <td>Expires</td>
-                </th>
+                <tr>
+                    <th>Product</th>
+                    <th>Expires</th>
+                </tr>
             </thead>
             <tbody id="fridge-body">
                 <!-- Content added dynamically -->
             </tbody>
+            <tfoot id="fridge-footer">
+                <tr>
+                    <th>Products</th>
+                    <th>Expired</th>
+                </tr>
+                <tr>
+                    <td id="sum-products"></td>
+                    <td id="sum-expired"></td>
+                </tr>
+            </tfoot>
         </table>
         <dialog id="add-product">
             <form id="add-product-form">
                 <label for="product-input">Product</label>
-                <input type="text" id="product-input" name="product">
+                <input type="text" id="product-input" name="product" />
                 <label for="expires-input">Expires</label>
-                <input type="date" id="expires-input" name="expires">
-                <button type="submit"id="submit-button">Save</button>
+                <input type="date" id="expires-input" name="expires" />
+                <button type="submit" id="submit-button">Save</button>
             </form>
         </dialog>
     </body>
