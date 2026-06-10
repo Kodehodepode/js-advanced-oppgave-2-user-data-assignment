@@ -4,3 +4,5 @@ const fridgeFooter = document.getElementById("fridge-footer");
 
 const sumProducts = document.getElementById("sum-products");
 const sumExpired = document.getElementById("sum-expired");
+
+const addProductForm = document.getElementById("add-product-form");
