@@ -6,11 +6,11 @@ In localStorage, an array of objects is stored under the key `fridge`, having th
 [
     {
         product: String,
-        expiration: Date
+        expires: Date
     },
     ...
 ]
 ```
 
 - `product` is the name of a product in the fridge
-- `expiration` is the best-before date, in milliseconds since the epoch (raw Date())
+- `expires` is the best-before date, in milliseconds since the epoch (raw Date())
