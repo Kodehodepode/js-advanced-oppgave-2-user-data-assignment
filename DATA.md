@@ -6,6 +6,7 @@ In localStorage, an array of objects is stored under the key `fridge`, having th
 [
     {
         product: String,
+        quantity: Number,
         expires: Date
     },
     ...
@@ -13,4 +14,5 @@ In localStorage, an array of objects is stored under the key `fridge`, having th
 ```
 
 - `product` is the name of a product in the fridge
-- `expires` is the best-before date, in milliseconds since the epoch (raw Date())
+- `quantity` is the count of the product, as a number with or without decimals
+- `expires` is the best-before date, in the strict ISO format as returned by date input fields
