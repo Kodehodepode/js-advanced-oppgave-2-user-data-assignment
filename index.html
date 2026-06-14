@@ -5,38 +5,114 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Fridge</title>
         <link rel="stylesheet" href="style.css" />
+        <script src="data.js" defer></script>
+        <script src="build-page.js" defer></script>
         <script src="script.js" defer></script>
     </head>
     <body>
-        <table id="fridge-table">
-            <thead>
-                <tr>
-                    <th>Product</th>
-                    <th>Expires</th>
-                </tr>
-            </thead>
-            <tbody id="fridge-body">
-                <!-- Content added dynamically -->
-            </tbody>
-            <tfoot id="fridge-footer">
-                <tr>
-                    <th>Products</th>
-                    <th>Expired</th>
-                </tr>
-                <tr>
-                    <td id="sum-products"></td>
-                    <td id="sum-expired"></td>
-                </tr>
-            </tfoot>
-        </table>
-        <dialog id="add-product">
-            <form id="add-product-form">
-                <label for="product-input">Product</label>
-                <input type="text" id="product-input" name="product" />
-                <label for="expires-input">Expires</label>
-                <input type="date" id="expires-input" name="expires" />
-                <button type="submit" id="submit-button">Save</button>
-            </form>
-        </dialog>
+        <header>
+            <nav>
+                <h1>Fridge content</h1>
+                <button id="empty-fridge-button">Empty</button>
+                <button id="add-product-button">Add product</button>
+            </nav>
+        </header>
+        <main>
+            <table id="fridge-table">
+                <thead>
+                    <tr>
+                        <th>
+                            <button id="sort-products-button">Products</button>
+                        </th>
+                        <th>
+                            <button id="sort-quantity-button">Quantity</button>
+                        </th>
+                        <th>
+                            <button id="sort-expires-button">Expires</button>
+                        </th>
+                        <th>
+                            <button id="filter-products-button">Filter</button>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="fridge-body">
+                    <!-- Content added dynamically -->
+                </tbody>
+                <tfoot id="fridge-footer">
+                    <tr>
+                        <th>Total products</th>
+                        <th></th>
+                        <th>Expired products</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td id="sum-products"></td>
+                        <th></th>
+                        <td id="sum-expired"></td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <dialog id="add-product-dialog">
+                <form id="add-product-form">
+                    <label for="product-input">Product</label>
+                    <input
+                        type="text"
+                        id="product-input"
+                        name="product"
+                        required
+                    />
+                    <label for="quantity-input">quantity</label>
+                    <input
+                        type="number"
+                        id="quantity-input"
+                        name="quantity"
+                        required
+                    />
+                    <label for="expires-input">Expires</label>
+                    <input
+                        type="date"
+                        id="expires-input"
+                        name="expires"
+                        required
+                    />
+                    <button type="submit" id="submit-button">Save</button>
+                </form>
+            </dialog>
+            <dialog id="edit-product-dialog">
+                <form id="edit-product-form">
+                    <input
+                        type="hidden"
+                        id="edit-product-index"
+                        name="index"
+                        value=""
+                    />
+                    <label for="edit-product-input">Product</label>
+                    <input
+                        type="text"
+                        id="edit-product-input"
+                        name="product"
+                        required
+                    />
+                    <label for="edit-quantity-input">quantity</label>
+                    <input
+                        type="number"
+                        id="edit-quantity-input"
+                        name="quantity"
+                        required
+                    />
+                    <label for="edit-expires-input">Expires</label>
+                    <input
+                        type="date"
+                        id="edit-expires-input"
+                        name="expires"
+                        required
+                    />
+                    <button type="submit" id="edit-submit-button">Save</button>
+                </form>
+            </dialog>
+        </main>
+        <footer></footer>
     </body>
 </html>

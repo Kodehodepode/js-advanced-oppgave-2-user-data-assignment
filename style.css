@@ -3,3 +3,70 @@
     padding: 0;
     font-family: sans-serif;
 }
+
+body {
+    display: grid;
+    place-items: center;
+    padding: 40px;
+}
+
+header,
+main {
+    width: 600px;
+}
+
+main {
+    table {
+        width: 100%;
+        td {
+            text-align: right;
+        }
+        td:first-of-type {
+            text-align: left;
+        }
+        tfoot td:first-of-type,
+        tfoot th:first-of-type {
+            text-align: left;
+        }
+        tfoot td,
+        tfoot th {
+            text-align: right;
+        }
+    }
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    gap: 8px;
+
+    h1 {
+        flex-grow: 1;
+    }
+}
+
+nav > button {
+    padding: 4px 8px;
+}
+
+th > button {
+    width: 100%;
+}
+
+td > button {
+    margin-left: 4px;
+}
+
+dialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    form {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        gap: 8px;
+    }
+}
