@@ -14,6 +14,6 @@ A project managing items in a fridge
 
 ## Files
 
-`data.js` contains the data structure, filters, and functions that operate on data
-`build-page.js` contains functions that generate the html and uses filters etc
-`script.js` ties it together and applies event listeners
+- `data.js` contains the data structure, filters, and functions that operate on data
+- `build-page.js` contains functions that generate the html and uses filters etc
+- `script.js` ties it together and applies event listeners
