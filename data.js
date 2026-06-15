@@ -38,21 +38,21 @@ const filters = {
             Sammenligner dagen i dag med utgåttdato på produkt.
 
             Først må datatypene samsvare (konverteres til millisekunder).
-            Dagens dato settes til slutten av døgnet, slik at produkter ikke er utgått før dagen er over.
+            Dagens dato settes til begynnelsen av døgnet, slik at produkter ikke er utgått før dagen er over.
         */
 
         const expires = new Date(fridgeItem.expires).valueOf(); // Konverterer "YYYY-MM-DD" til millisekunder
-        const today = new Date().setHours(23, 59, 59, 999); // Dagens dato i millisekunder, men ved midnatt
+        const today = new Date().setHours(0, 0, 0, 1); // Dagens dato i millisekunder, men ved dagens start
 
         return expires < today;
     },
     notExpired: (fridgeItem) => {
-        // Inkluderer varer som går ut i dag, igjen settes dagens klokke til midnatt.
+        // Inkluderer varer som går ut i dag, igjen settes dagens klokke til starten på døgnet.
         const expires = new Date(fridgeItem.expires).valueOf();
-        const today = new Date().setHours(23, 59, 59, 999);
+        const today = new Date().setHours(0, 0, 0, 1);
 
         // Sammenligningstegnet snus
-        return expires < today;
+        return expires > today;
     },
 };
 
